@@ -1,11 +1,15 @@
 
-##服务配置
-server:
-  port: 8080
-
+## rabbitmq配置 org.springframework.boot.autoconfigure.amqp.RabbitProperties
+spring: 
+  rabbitmq: 
+    host: 192.168.125.27
+    port: 5672
+    username: admin
+    password: admin
+      
 
 ##日志配置
 logging:
   level:
     org:
-      springframework: INFO
+      springframework: info

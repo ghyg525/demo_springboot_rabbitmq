@@ -1,24 +1,22 @@
-package org.yangjie.service;
-
-import static org.junit.Assert.assertNotNull;
+package org.yangjie.util;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
+@SpringBootTest
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
-public class UserServiceTest {
+public class MSenderTest {
 
 	@Autowired
-	private UserService userService;
+	private MSenderUtil mSenderUtil;
 	
+
 	@Test
 	public void testGet() {
-		assertNotNull(userService.login("1","1"));
+		mSenderUtil.send("test", "I am a message");
 	}
 
 }
