@@ -22,12 +22,12 @@ public class MSenderUtil {
 	/**
 	 * 发送消息
 	 * @author YangJie [2016年11月1日 上午11:31:34]
-	 * @param exchange
+	 * @param routingKey
 	 * @param message
 	 */
-	public void send(String queue, String message){
-		logger.info("发送消息, queue={}, message={}", queue, message);
-		rabbitTemplate.convertAndSend(queue, message);
+	public void send(String routingKey, String message){
+		logger.info("发送消息, routingKey={}, message={}", routingKey, message);
+		rabbitTemplate.convertAndSend(routingKey, message);
 	}
 
 }
